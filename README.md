@@ -5,7 +5,7 @@ With MSI (Multi-Source Inventory) Magento does not lower the stock when an order
 ![Reserved Quantities grid: reserved quantity per SKU and stock, orders holding it, stuck quantity](images/reserved-qty-grid.png)
 
 **Compatibility:** Magento Open Source / Adobe Commerce 2.4.4 – 2.4.9 · Mage-OS 1.x / 3.x / 4.x · PHP 8.1 – 8.4 · MSI enabled
-**License:** commercial · coming soon
+**License:** free · **Current version:** see [Releases](../../releases)
 
 ## Features
 
@@ -28,9 +28,17 @@ With MSI (Multi-Source Inventory) Magento does not lower the stock when an order
 - MSI enabled: `Magento_InventoryReservations`, `Magento_InventoryAdminUi`
 - Package: `threecommerce/m2-base`
 
-## Availability
+## Installation
 
-This module is **not yet available to buy**. It is a commercial product and is coming soon. To be notified when it is released, or to ask for details, [get in touch](https://www.threecommerce.it/contatti?utm_source=github&utm_medium=readme&utm_campaign=magento2-reserved-qty).
+The module is free and distributed through our Composer repository at `repo.threecommerce.it`. Request the credentials from the [product page](https://www.threecommerce.it/quantita-riservate-msi-magento-2?utm_source=github&utm_medium=readme&utm_campaign=magento2-reserved-qty), then:
+
+```bash
+composer config repositories.threecommerce composer https://repo.threecommerce.it
+composer require threecommerce/m2-reserved-qty
+bin/magento module:enable Threecommerce_ReservedQty
+bin/magento setup:upgrade
+bin/magento cache:flush
+```
 
 ## Configuration
 
@@ -38,7 +46,8 @@ None: after `bin/magento setup:upgrade` the grid is in the Stores → Inventory 
 
 ## Documentation and support
 
-- [Changelog](CHANGELOG.md)
+- Product page and user guide (PDF): [threecommerce.it/quantita-riservate-msi-magento-2](https://www.threecommerce.it/quantita-riservate-msi-magento-2?utm_source=github&utm_medium=readme&utm_campaign=magento2-reserved-qty)
+- [Changelog](CHANGELOG.md) (in Italian)
 - Support and custom development: [threecommerce.it/contatti](https://www.threecommerce.it/contatti?utm_source=github&utm_medium=readme&utm_campaign=magento2-reserved-qty)
 
 ---
